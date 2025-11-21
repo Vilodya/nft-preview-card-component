@@ -1,0 +1,31 @@
+@mixin text-base {
+  font-family: var(--main-font);
+}
+
+@mixin text-preset-1 {
+  @include text-base;
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-l);
+  line-height: 125%;
+}
+
+@mixin text-preset-2 {
+  @include text-base;
+  font-weight: var(--font-weight-200);
+  font-size: var(--font-size-m);
+  line-height: 145%;
+}
+
+@mixin text-preset-3 {
+  @include text-base;
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-base);
+  line-height: 125%;
+}
+
+@mixin text-preset-4 {
+  @include text-base;
+  font-weight: var(--font-weight-200);
+  font-size: var(--font-size-base);
+  line-height: 125%;
+}

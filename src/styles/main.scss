@@ -1,0 +1,135 @@
+@use 'reset';
+
+@use 'fonts';
+@use 'mixins' as *;
+
+@use 'footer';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+  background-color: var(--blue-950);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-300) 12px;
+}
+
+.card {
+  max-width: 350px;
+  padding: var(--spacing-300);
+  background-color: var(--blue-900);
+  border-radius: var(--spacing-200);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--spacing-100);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  &__image-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__content {
+    margin-top: var(--spacing-300);
+  }
+
+  &__title {
+    @include text-preset-1;
+    color: var(--white);
+
+    &-link {
+      color: inherit;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: var(--cyan);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: var(--spacing-200);
+    @include text-preset-2;
+    color: var(--blue-500);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-300);
+  }
+
+  &__price,
+  &__time-left {
+    display: flex;
+    gap: var(--spacing-100);
+    align-items: center;
+  }
+
+  &__price {
+    @include text-preset-3;
+    color: var(--cyan);
+  }
+
+  &__time-left {
+    @include text-preset-4;
+    color: var(--blue-500);
+  }
+
+  &__divider {
+    margin: var(--spacing-300) 0;
+    border: none;
+    height: 1px;
+    background-color: var(--blue-800);
+  }
+}
+
+.author {
+  display: flex;
+  gap: var(--spacing-200);
+  align-items: center;
+
+  &__avatar-wrapper {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+  }
+
+  &__caption {
+    @include text-preset-2;
+    color: var(--blue-500);
+  }
+
+  &__name {
+    color: var(--white);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--cyan);
+      transition: all 0.3s ease;
+    }
+  }
+}

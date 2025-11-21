@@ -1,0 +1,24 @@
+:root {
+  --blue-500: hsl(215, 51%, 70%);
+  --blue-800: hsl(215, 32%, 27%);
+  --blue-900: hsl(216, 50%, 16%);
+  --blue-950: hsl(217, 54%, 11%);
+
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  --cyan: hsl(178,100%, 50%);
+
+
+  --main-font: 'Outfit', Arial, sans-serif;
+  --font-weight-200: 200;
+  --font-weight-600: 600;
+
+  --font-size-base: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 22px;
+
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+}
