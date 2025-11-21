@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/interactive-rating-component/',
+  base: '/nft-preview-card-component/',
 });
